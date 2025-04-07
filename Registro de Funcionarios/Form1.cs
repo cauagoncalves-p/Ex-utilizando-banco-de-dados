@@ -93,6 +93,8 @@ namespace Registro_de_Funcionarios
             novosDados.Insert(titulo, empresaDesenvolvedora, empresaPublicadora, lancamentos, genero, plataforma, preco, classificacao);
             atualizarlista();
             LimparTela();
+
+            MessageBox.Show("Adicionado com Sucesso", "PRONTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -127,12 +129,19 @@ namespace Registro_de_Funcionarios
             atualizarlista();
             LimparTela();
 
+            MessageBox.Show("Excluido com sucesso", "PRONTO", MessageBoxButtons.OK, MessageBoxIcon.Information );
+
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            if (lboJogos.SelectedItem == null) return;
-           
+            if (lboJogos.SelectedItem == null) 
+            {
+                MessageBox.Show("Selecione qual elemento você quer atualizar", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+         
+          
             tbJogoRow dadosAtualizar = lboJogos.SelectedItem as tbJogoRow;
             tbJogoTableAdapter atualizar = new tbJogoTableAdapter();
 
@@ -158,6 +167,8 @@ namespace Registro_de_Funcionarios
 
             atualizarlista();
             LimparTela();
+
+            MessageBox.Show("Atualizado com sucesso", "PRONTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }
