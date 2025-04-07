@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnId = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lbldesenvoledora = new System.Windows.Forms.Label();
@@ -45,8 +45,6 @@
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.lblClassificacaoEtaria = new System.Windows.Forms.Label();
             this.txtClassicacaoEtaria = new System.Windows.Forms.TextBox();
-            this.txtModoJogo = new System.Windows.Forms.TextBox();
-            this.lblModoJogo = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lboJogos = new System.Windows.Forms.ListBox();
             this.btnAdicionar = new System.Windows.Forms.Button();
@@ -55,14 +53,14 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnId
+            // txtID
             // 
-            this.btnId.Enabled = false;
-            this.btnId.Location = new System.Drawing.Point(64, 17);
-            this.btnId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnId.Name = "btnId";
-            this.btnId.Size = new System.Drawing.Size(148, 26);
-            this.btnId.TabIndex = 0;
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(64, 17);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(148, 26);
+            this.txtID.TabIndex = 0;
             // 
             // txtTitulo
             // 
@@ -215,25 +213,6 @@
             this.txtClassicacaoEtaria.Size = new System.Drawing.Size(138, 26);
             this.txtClassicacaoEtaria.TabIndex = 18;
             // 
-            // txtModoJogo
-            // 
-            this.txtModoJogo.AcceptsReturn = true;
-            this.txtModoJogo.Location = new System.Drawing.Point(140, 222);
-            this.txtModoJogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtModoJogo.Name = "txtModoJogo";
-            this.txtModoJogo.Size = new System.Drawing.Size(138, 26);
-            this.txtModoJogo.TabIndex = 20;
-            // 
-            // lblModoJogo
-            // 
-            this.lblModoJogo.AutoSize = true;
-            this.lblModoJogo.Location = new System.Drawing.Point(14, 225);
-            this.lblModoJogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblModoJogo.Name = "lblModoJogo";
-            this.lblModoJogo.Size = new System.Drawing.Size(88, 20);
-            this.lblModoJogo.TabIndex = 19;
-            this.lblModoJogo.Text = "Modo Jogo";
-            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -262,6 +241,7 @@
             this.btnAdicionar.TabIndex = 23;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnExcluir
             // 
@@ -271,6 +251,7 @@
             this.btnExcluir.TabIndex = 24;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtualizar
             // 
@@ -280,6 +261,7 @@
             this.btnAtualizar.TabIndex = 26;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnLimpar
             // 
@@ -289,6 +271,7 @@
             this.btnLimpar.TabIndex = 27;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // Form1
             // 
@@ -301,8 +284,6 @@
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.lboJogos);
             this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtModoJogo);
-            this.Controls.Add(this.lblModoJogo);
             this.Controls.Add(this.txtClassicacaoEtaria);
             this.Controls.Add(this.lblClassificacaoEtaria);
             this.Controls.Add(this.txtPreco);
@@ -319,7 +300,7 @@
             this.Controls.Add(this.lbldesenvoledora);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtTitulo);
-            this.Controls.Add(this.btnId);
+            this.Controls.Add(this.txtID);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
@@ -332,7 +313,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox btnId;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lbldesenvoledora;
@@ -349,8 +330,6 @@
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label lblClassificacaoEtaria;
         private System.Windows.Forms.TextBox txtClassicacaoEtaria;
-        private System.Windows.Forms.TextBox txtModoJogo;
-        private System.Windows.Forms.Label lblModoJogo;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.ListBox lboJogos;
         private System.Windows.Forms.Button btnAdicionar;
